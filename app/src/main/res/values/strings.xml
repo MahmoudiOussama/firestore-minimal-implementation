@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Firestore-minimal</string>
+    <string name="concat_status">Status : %s</string>
+</resources>

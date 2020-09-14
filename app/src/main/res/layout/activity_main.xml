@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="100"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="33"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Document 'test_order'"/>
+
+        <TextView
+            android:id="@+id/testOrderStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="status : "/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarStyle">
+
+            <Button
+                android:id="@+id/startOrderQuery1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:text="Start query"
+                android:textColor="@android:color/holo_green_dark"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+            <Button
+                android:id="@+id/stopOrderQuery1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="Stop query"
+                android:textColor="@android:color/holo_red_light"
+                style="?android:attr/buttonBarButtonStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@android:color/background_dark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="33"
+        android:paddingTop="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Document 'ZYaJKmQF9n1RknziD1tj'"/>
+
+        <TextView
+            android:id="@+id/zyaOrderStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="status : "/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarStyle">
+
+            <Button
+                android:id="@+id/startOrderQuery2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:text="Start query"
+                android:textColor="@android:color/holo_green_dark"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+            <Button
+                android:id="@+id/stopOrderQuery2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="Stop query"
+                android:textColor="@android:color/holo_red_light"
+                style="?android:attr/buttonBarButtonStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="2dp"
+        android:background="@android:color/background_dark"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="33"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Document 'arqHFzuojhY4MsqxRQcl'"/>
+
+        <TextView
+            android:id="@+id/arqOrderStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="status : "/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="?android:attr/buttonBarStyle">
+
+            <Button
+                android:id="@+id/startOrderQuery3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:text="Start query"
+                android:textColor="@android:color/holo_green_dark"
+                style="?android:attr/buttonBarButtonStyle"/>
+
+            <Button
+                android:id="@+id/stopOrderQuery3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="10dp"
+                android:text="Stop query"
+                android:textColor="@android:color/holo_red_light"
+                style="?android:attr/buttonBarButtonStyle"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
