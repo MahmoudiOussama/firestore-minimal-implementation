@@ -2,6 +2,7 @@ package test.project.firestore_minimal;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import ro.alexmamo.firestore_document.FirestoreDocument;
 import test.project.firestore_minimal.models.FireStoreOrder;
 
 import android.os.Bundle;
@@ -19,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView testOrderStatus, zyaOrderStatus, arqOrderStatus;
     private ListenerRegistration testOrderListener, zyaOrderListener, arqOrderListener;
-
+    private FirestoreDocument firestoreDocument = FirestoreDocument.getInstance();;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,7 +54,9 @@ public class MainActivity extends AppCompatActivity {
                                 }
 
                                 Log.d("testing", "testOrder onEvent triggered");
-                                if (value != null && value.exists()) {
+                                int documentSize = firestoreDocument.getSize(value);
+                                Log.d("testing", "document size : "+documentSize);
+                                if (value.exists()) {
                                     FireStoreOrder fireStoreOrder = value.toObject(FireStoreOrder.class);
                                     if (fireStoreOrder != null && fireStoreOrder.getStatus() != null) {
                                         testOrderStatus.setText(getString(R.string.concat_status, fireStoreOrder.getStatus()));
@@ -97,7 +100,9 @@ public class MainActivity extends AppCompatActivity {
                                 }
 
                                 Log.d("testing", "zyaOrder onEvent triggered");
-                                if (value != null && value.exists()) {
+                                int documentSize = firestoreDocument.getSize(value);
+                                Log.d("testing", "document size : "+documentSize);
+                                if (value.exists()) {
                                     FireStoreOrder fireStoreOrder = value.toObject(FireStoreOrder.class);
                                     if (fireStoreOrder != null && fireStoreOrder.getStatus() != null) {
                                         zyaOrderStatus.setText(getString(R.string.concat_status, fireStoreOrder.getStatus()));
@@ -141,7 +146,9 @@ public class MainActivity extends AppCompatActivity {
                                 }
 
                                 Log.d("testing", "arqOrder onEvent triggered");
-                                if (value != null && value.exists()) {
+                                int documentSize = firestoreDocument.getSize(value);
+                                Log.d("testing", "document size : "+documentSize);
+                                if (value.exists()) {
                                     FireStoreOrder fireStoreOrder = value.toObject(FireStoreOrder.class);
                                     if (fireStoreOrder != null && fireStoreOrder.getStatus() != null) {
                                         arqOrderStatus.setText(getString(R.string.concat_status, fireStoreOrder.getStatus()));
